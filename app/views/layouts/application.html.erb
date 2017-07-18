@@ -6,11 +6,43 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  
+  <link rel="stylesheet" media="all" href="/assets/application-1c79c29286204cfec74780022d0186e27fc9f09c8b5ae96d566e54dca4b9ce48.css">
+  <script src="/assets/application-521b49b32664ff50f93d312357743f30a2baf099738409fbbf5f881e52ae6a52.js"></script>
+
 </head>
 
 <body>
+ 
   <div class="container">
-    <%= yield %>
+    <div class ="row">
+      <div class="col-md-12">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Part I: Flexible Routes</th>
+              <td><a href="/flexible/square/5">Flexible Square Example</a></td>
+              <td><a href="/flexible/square_root/8">Flexible Square Root Example</a></td>
+              <td><a href="/flexible/payment/410/30/250000">Flexible Payment Example</a></td>
+              <td><a href="/flexible/random/50/100">Flexible Number Example</a></td>
+            </tr>
+            <tr>
+              <th>Part II: Forms</th>
+              <td><a href="/square/new">Square Form</a></td>
+              <td><a href="/square_root/new">Square Root Form</a></td>
+              <td><a href="/payment/new">Payment Form</a></td>
+              <td><a href="/random/new">Random Form</a></td>
+            </tr>
+             <tr>
+              <th>Part III: More Practice</th>
+              <td><a href="Dummy">Dummy</a></td>
+              <td><a href="Dummy">Dummy</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <%= yield %>
+      </div>
+    </div>
   </div>
 
   <div class="rails-toolbar">

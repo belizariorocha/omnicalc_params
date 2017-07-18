@@ -1,8 +1,4 @@
 class CalculationsController < ApplicationController
-   def dummy
-
-    render("dummy.html.erb")   
-   end
    
    def flex_square
     
@@ -37,13 +33,15 @@ class CalculationsController < ApplicationController
     render("flex_pmt.html.erb")   
    end
 
-   
-   
-   
-   
-   
-   def square_new
+   def flex_rnd
+    
+    # The params function reads a string. We need to convert to number for calculations
+    @min = params[:min].to_i
+    @max = params[:max].to_i
+    @x = @max - @min
+    @output = (@min + @x*rand()).round(5)
 
-    render("square_new.html.erb")   
+    render("flex_rnd.html.erb")   
    end
+   
 end
